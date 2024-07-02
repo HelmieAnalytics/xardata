@@ -16,17 +16,22 @@ Usage:
    
 2. Use the provided functions to perform specific tasks related to stock data.
 
+
 Example:
-'from zaquity_data import marketstack_tickers, stock_data_fetcher, stock_data_cleaner'
+```css
+import zaquity
+from zaquity import jse_tickers from zaquity import jse_data
+from zaquity import jse_process_data
 
 tickers = jse_tickers.get_tickers("your_api_key_here")
 
 jse_data.get_data(['AAPL', 'MSFT'], '2022-01-01', '2022-12-31', '/path/to/output_folder')
 
-jse_process_data.clean('/path/to/csv_folder')'
+jse_process_data.clean('/path/to/csv_folder')
+```
 
 
 
-__version__ = "0.1.0"
-__author__ = "Helmie Analytics"
-__email__ = "francoishemie@outlool.com"
+version = "0.1.0"
+author = "Helmie Analytics"
+email ="francoishemie@outlool.com"
