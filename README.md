@@ -2,6 +2,10 @@
 
 This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE) , including processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset in csv files to a folder on your local disc drive.
 
+Note:
+1. The package is currently under development and not available for installation on Pypi
+2. An MarketStack API is required to retrieve stock tickers
+
 ## Modules
 
 `jse_tickers`: Retrieves stock tickers from the MarketStack API.
