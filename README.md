@@ -2,14 +2,16 @@
 
 This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE). It includes processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset/data bundle to a folder in your local disc drive. Each file saved in the dataset is in csv format. 
 
-Note:
+API requirement:
 
-1. The package is currently under development and not available for installation on PyPI.
+A MarketStack API is required to retrieve stock tickers which the user can obtain by signing up for a free MarketStack account here: https://marketstack.com/
 
-3. A MarketStack API is required to retrieve stock tickers which the user can obtain by signing up for a free MarketStack account here: https://marketstack.com/
+Limitations:
 
-2. The data imported with this package is not recommended for investment strategies or any sort of trading system development since the dataset only includes the historical prices of companies trading on XJSE on the specified day the dataset is imported. The dataset is therefore inherently biased (survivorship bias.) Later versions of zaquity aims to mitigate this effect. The user may for completion add their own data from other sources to render their final dataset 'bias free.'
+1. The package is currently under development and not available for release and installation on PyPI.
 
+2. The data imported with this package is not suitable for backtesting investment strategies or developing trading systems. It includes only historical prices of companies trading on the XJSE (Johannesburg Stock Exchange) on the specific day and time the package is used. As a result, the dataset suffers from inherent bias, specifically survivorship bias. In future versions of zaquity, efforts will be made to mitigate this effect. To create a more robust dataset, users can supplement it with data from other sources to reduce bias and improve the reliability of their analysis.
+   
 ## Modules
 
 `jse_tickers`: Retrieves stock tickers from the MarketStack API.
