@@ -13,7 +13,7 @@ setup(
 
     url='https://github.com/HelmieAnalytics/Zaquitydata',
     
-    long_description= open('README.md').read() #+ '\n\n' + open('CHANGELOG.md').read(),
+    long_description= open('README.md').read(),#+ '\n\n' + open('CHANGELOG.md').read(),
     long_description_content_type = "text/markdown",
 
     install_requires= [
