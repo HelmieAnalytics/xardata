@@ -1,13 +1,11 @@
 # zaquity
-"""
-zaquity_data package
 
-This package provides utility functions for working with stock data, including fetching historical data, cleaning outliers, and processing stock tickers.
+This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE) , including processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset in csv files to a folder on your local disc drive.
 
 Modules:
-    - `marketstack_tickers`: Retrieves stock tickers from the MarketStack API.
-    - `stock_data_fetcher`: Fetches historical stock data using the YahooQuery library.
-    - `stock_data_cleaner`: Processes stock CSV files to remove outliers.
+    - `jse_tickers`: Retrieves stock tickers from the MarketStack API.
+    - `jse_data`: Fetches historical stock data using the YahooQuery library.
+    - `jse_process_data`: Processes stock CSV files to remove outliers.
 
 Usage:
     1. Import the desired module(s) from the package.
@@ -21,6 +19,6 @@ Example:
 
 """
 
-__version__ = "1.0.0"
-__author__ = "Your Name"
-__email__ = "your@email.com"
+__version__ = "0.1.0"
+__author__ = "Helmie Analytics"
+__email__ = "francoishemie@outlool.com"
