@@ -44,15 +44,17 @@ jse_process_data.clean('/path/to/csv_folder')
 
 ## Example usage
 
+
+Import functions
 ```
-#Import functions
 import pandas as pd
 import zaquity
 from zaquity import jse_tickers as jt
 from zaquity import jse_data as jd
 from zaquity import process_data as jpd
-
-#Set variables
+```
+Set variables
+```
 my_access_key = '<your_MarketStack_API_key>'
 
 symbols = tickers
@@ -61,18 +63,19 @@ start = '2000-01-27'
 end = '2024-06-29'
 
 output_folder_path = '/content/jsestocks'
-
-#Call functions
-
+```
+Call functions
+```
 tickers = jt.get_tickers(my_access_key)
 
 jd.get_data(symbols, start, end, output_folder_path)
-
-#Saving the data for each stock to disc
+```
+Saving the data for each stock to disc.
+```
 jpd.clean('/content/jsestocks')
-
-# The ohlc price data can now be read from disc to a pandas dataframe 
-
+```
+Read data from disc to a pandas dataframe 
+```
 df = pd.read_csv('/content/jsestocks/NPN.JO.csv') 
 ```
 Passing the `df` variable or `print(df)` function will display the ohlc price data of Naspers (XJSE.NPN) share prices from 27 January 2000 to 29 June 2024 in a pandas dataframe. 
