@@ -5,12 +5,6 @@ This package provides utility functions for working with stock price series data
 API requirement:
 
 A MarketStack API is required to retrieve stock tickers which the user can obtain by signing up for a free MarketStack account here: https://marketstack.com/
-
-Limitations:
-
-1. The package is currently under development and not available for release and installation on PyPI.
-
-2. The data imported with this package is not suitable for backtesting investment strategies or developing trading systems. It includes only historical prices of companies trading on the XJSE (Johannesburg Stock Exchange) on the specific day and time the package is used. As a result, the dataset suffers from inherent bias, specifically survivorship bias. In future versions of zaquity, efforts will be made to mitigate this effect. To create a more robust dataset, users can supplement it with data from other sources to reduce bias and improve the reliability of their analysis.
    
 ## Modules
 
@@ -83,3 +77,9 @@ jpd.clean('/content/jsestocks')
 df = pd.read_csv('/content/jsestocks/NPN.JO.csv') 
 ```
 Passing the `df` variable or `print(df)` function will now display the ohlc price data of Naspers (XJSE.NPN) from 27 January 2000 to 29 June 2024 in a pandas dataframe. 
+
+## Limitations and recommendations
+
+1. The package is currently under development and not available for release and installation on PyPI.
+
+2. The data imported with this package is not suitable for backtesting investment strategies or developing trading systems. It includes only historical prices of companies trading on the XJSE (Johannesburg Stock Exchange) on the specific day and time the package is used. As a result, the dataset suffers from inherent bias, specifically survivorship bias. In future versions of zaquity, efforts will be made to mitigate this effect. To create a more robust dataset, users can supplement it with data from other sources to reduce bias and improve the reliability of their analysis.
