@@ -14,7 +14,7 @@ This package provides utility functions for working with stock price series data
 
 ### 1. Import the desired module(s) from the package.
 
-```css
+```
 import zaquity
 from zaquity import jse_tickers
 from zaquity import jse_data
@@ -24,30 +24,28 @@ from zaquity import jse_process_data
 ### 2. Use the provided functions to perform specific tasks related to stock data.
 
 `.get.tickers` function:
-```css
+```
 tickers = jse_tickers.get_tickers("your_api_key_here")
 ```
-
 `.get.data` function:
-```css
+```
 jse_data.get_data(['AAPL', 'MSFT'], '2022-01-01', '2022-12-31', '/path/to/output_folder')
 ```
-
 `.clean` function:
-```css
+```
 jse_process_data.clean('/path/to/csv_folder')
 ```
 
 ## Example usage
 
-```css
+```
 #Import functions
 import zaquity
 from zaquity import jse_tickers as jt
 from zaquity import jse_data as jd
 from zaquity import process_data as jpd
 
-# Set variables
+#Set variables
 my_access_key = '<your_Marketstack_API_Key>'
 
 symbols = tickers
