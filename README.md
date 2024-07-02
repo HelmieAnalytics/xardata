@@ -1,12 +1,14 @@
 # zaquity
 
-This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE). It includes processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset to a folder in your local disc drive. Each file saved in the dataset is in csv format. 
+This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE). It includes processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset/data bundle to a folder in your local disc drive. Each file saved in the dataset is in csv format. 
 
 Note:
 
 1. The package is currently under development and not available for installation on PyPI.
-    
-2. A MarketStack API is required to retrieve stock tickers which the user can obtain by signing up for a free MarketStack account here: https://marketstack.com/
+
+3. A MarketStack API is required to retrieve stock tickers which the user can obtain by signing up for a free MarketStack account here: https://marketstack.com/
+
+2. The data imported with this package is not recommended for investment strategies or any sort of trading system development since the dataset only includes the historical prices of companies trading on XJSE on the specified day the dataset is imported. The dataset is therefore inherently biased (survivorship bias.) Later versions of zaquity aims to mitigate this effect. The user may for completion add their own data from other sources to render their final dataset 'bias free.'
 
 ## Modules
 
