@@ -1,4 +1,4 @@
-# zaquity
+# zaquitydata
 
 This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE). It includes processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset/data bundle to a folder in your local disc drive. Each file saved in the dataset is in csv format. 
 
