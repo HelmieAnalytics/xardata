@@ -12,7 +12,7 @@ Note:
 
 `jse_tickers`: Retrieves stock tickers from the MarketStack API.
 
-`jse_data`: Fetches historical stock data using in ohlcv (Open, High, Low, Close, Volume) .
+`jse_data`: Fetches historical stock data in ohlcv format (Open, High, Low, Close, Volume).
 
 `jse_process_data`: Processes stock CSV files to remove outliers from the dataset.
 
@@ -53,7 +53,7 @@ from zaquity import jse_data as jd
 from zaquity import process_data as jpd
 
 #Set variables
-my_access_key = '<your_Marketstack_API_Key>'
+my_access_key = '<your_MarketStack_API_key>'
 
 symbols = tickers
 
@@ -75,9 +75,4 @@ jpd.clean('/content/jsestocks')
 
 df = pd.read_csv('/content/jsestocks/NPN.JO.csv') 
 ```
-Passing the `df` variable or `print(df)` function will display the ohlc price data of Naspers share prices from 27 January 2000 to 29 June 2024 in a pandas dataframe. 
-```
-
-version:"0.1.0"
-author:"Helmie Analytics"
-email:"francoishemie@outlook.com"
+Passing the `df` variable or `print(df)` function will display the ohlc price data of Naspers (XJSE.NPN) share prices from 27 January 2000 to 29 June 2024 in a pandas dataframe. 
