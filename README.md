@@ -3,8 +3,10 @@
 This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE) , including processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset in csv files to a folder on your local disc drive.
 
 Note:
-1. The package is currently under development and not available for installation on Pypi
-2. An MarketStack API is required to retrieve stock tickers
+
+1. The package is currently under development and not available for installation on PyPI.
+    
+2. An MarketStack API is required to retrieve stock tickers which the user can obtain by signing up for an account from the following link https://marketstack.com/
 
 ## Modules
 
@@ -44,6 +46,7 @@ jse_process_data.clean('/path/to/csv_folder')
 
 ```
 #Import functions
+import pandas as pd
 import zaquity
 from zaquity import jse_tickers as jt
 from zaquity import jse_data as jd
@@ -65,7 +68,15 @@ tickers = jt.get_tickers(my_access_key)
 
 jd.get_data(symbols, start, end, output_folder_path)
 
+#Saving the data for each stock to disc
 jpd.clean('/content/jsestocks')
+
+# The ohlc price data can now be read from disc to a pandas dataframe 
+
+df = pd.read_csv('/content/jsestocks/NPN.JO.csv') 
+
+Passing the `df` variabl or `print(df)` function will display the ohlc price data of Naspers' share prices from 27 January 2000 to 29 June 2024 in a pandas datafrme. 
+
 ```
 
 version:"0.1.0"
