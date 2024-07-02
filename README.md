@@ -1,20 +1,20 @@
 # zaquity
 
-This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE) , including processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset in csv files to a folder on your local disc drive.
+This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE). It includes processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset to a folder in your local disc drive. Each file saved in the dataset is in csv format. 
 
 Note:
 
 1. The package is currently under development and not available for installation on PyPI.
     
-2. An MarketStack API is required to retrieve stock tickers which the user can obtain by signing up for an account from the following link https://marketstack.com/
+2. A MarketStack API is required to retrieve stock tickers which the user can obtain by signing up for a free MarketStack account here: https://marketstack.com/
 
 ## Modules
 
 `jse_tickers`: Retrieves stock tickers from the MarketStack API.
 
-`jse_data`: Fetches historical stock data using the YahooQuery library.
+`jse_data`: Fetches historical stock data using in ohlcv (Open, High, Low, Close, Volume) .
 
-`jse_process_data`: Processes stock CSV files to remove outliers.
+`jse_process_data`: Processes stock CSV files to remove outliers from the dataset.
 
 ## Implementation
 
@@ -29,15 +29,15 @@ from zaquity import jse_process_data
    
 ### 2. Use the provided functions to perform specific tasks related to stock data.
 
-`.get.tickers` function:
+`.get.tickers`
 ```
 tickers = jse_tickers.get_tickers("your_api_key_here")
 ```
-`.get.data` function:
+`.get.data`
 ```
 jse_data.get_data(['AAPL', 'MSFT'], '2022-01-01', '2022-12-31', '/path/to/output_folder')
 ```
-`.clean` function:
+`.clean`
 ```
 jse_process_data.clean('/path/to/csv_folder')
 ```
@@ -74,9 +74,8 @@ jpd.clean('/content/jsestocks')
 # The ohlc price data can now be read from disc to a pandas dataframe 
 
 df = pd.read_csv('/content/jsestocks/NPN.JO.csv') 
-
-Passing the `df` variabl or `print(df)` function will display the ohlc price data of Naspers' share prices from 27 January 2000 to 29 June 2024 in a pandas datafrme. 
-
+```
+Passing the `df` variable or `print(df)` function will display the ohlc price data of Naspers share prices from 27 January 2000 to 29 June 2024 in a pandas dataframe. 
 ```
 
 version:"0.1.0"
