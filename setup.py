@@ -5,7 +5,7 @@ setup(
     
     packages=find_packages(include=['zaquitydata']),
     
-    version='0.1.3',
+    version='0.1.4',
     
     description='A stock price data import package',
     
@@ -16,7 +16,7 @@ setup(
     long_description= open('README.md').read(),#+ '\n\n' + open('CHANGELOG.md').read(),
     long_description_content_type = "text/markdown",
 
-    install_requires= ['yfinance','yahooquery<=2.3.7'],
+    install_requires= ['yfinance','yahooquery<=2.3.7', 'requests==2.22.0`],
 
     setup_requires= ['pytest-runner'],
 
