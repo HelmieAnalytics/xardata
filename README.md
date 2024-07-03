@@ -1,4 +1,4 @@
-# Zaquitydata
+# Zaquity Data
 
 This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE). It includes processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset/data bundle to a folder in your local disc drive. Each file saved in the dataset is in csv format. 
 
@@ -12,17 +12,17 @@ A MarketStack API is required to retrieve stock tickers which the user can obtai
 
 `jse_data`: Fetches historical stock data in ohlcv format (Open, High, Low, Close, Volume).
 
-`jse_process_data`: Processes stock CSV files to remove outliers from the dataset.
+`process_data`: Processes stock CSV files to remove outliers from the dataset.
 
 ## Implementation
 
 ### 1. Import the desired module(s) from the package.
 
 ```
-import Zaquitydata
-from Zaquitydata import jse_tickers
-from Zaquitydata import jse_data
-from Zaquitydata import jse_process_data
+import zaquitydata
+from zaquitydata import jse_tickers
+from zaquitydata import jse_data
+from zaquitydata import process_data
 ```
    
 ### 2. Use the provided functions to perform specific tasks related to stock data.
@@ -37,7 +37,7 @@ jse_data.get_data(['AAPL', 'MSFT'], '2022-01-01', '2022-12-31', '/path/to/output
 ```
 `.clean`
 ```
-jse_process_data.clean('/path/to/csv_folder')
+process_data.clean('/path/to/csv_folder')
 ```
 
 ## Example usage
@@ -46,10 +46,10 @@ jse_process_data.clean('/path/to/csv_folder')
 Import functions
 ```
 import pandas as pd
-import Zaquitydata
-from Zaquitydata import jse_tickers as jt
-from Zaquitydata import jse_data as jd
-from Zaquitydata import process_data as jpd
+import zaquitydata
+from zaquitydata import jse_tickers as jt
+from zaquitydata import jse_data as jd
+from zaquitydata import process_data as jpd
 ```
 1. Set variables.
 ```
@@ -80,6 +80,6 @@ Passing the `df` variable or `print(df)` function will now display the ohlc pric
 
 ## Limitations and recommendations
 
-1. Zaquitydata is currently under development and not available for release and installation on PyPI.
+1. zaquitydata is currently under development and not available for release and installation on PyPI.
 
-2. The data imported with Zaquitydata is not suitable for backtesting investment strategies or developing trading systems. It includes only historical prices of companies trading on the XJSE (Johannesburg Stock Exchange) on the specific day and time the package is used. As a result, the dataset imported with this package suffers from inherent bias, specifically survivorship bias. In future versions, efforts will be made to mitigate this effect. To create a more robust dataset, users can supplement it with data from other sources to reduce bias and improve the reliability of their analysis.
+2. The data imported with zaquitydata is not suitable for backtesting investment strategies or developing trading systems. It includes only historical prices of companies trading on the XJSE (Johannesburg Stock Exchange) on the specific day and time the package is used. As a result, the dataset imported with this package suffers from inherent bias, specifically survivorship bias. In future versions, efforts will be made to mitigate this effect. To create a more robust dataset, users can supplement it with data from other sources to reduce bias and improve the reliability of their analysis.
