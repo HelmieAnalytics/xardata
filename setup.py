@@ -5,7 +5,7 @@ setup(
     
     packages=find_packages(include=['zaquitydata']),
     
-    version='0.1.0',
+    version='0.1.2',
     
     description='A stock price data import package',
     
