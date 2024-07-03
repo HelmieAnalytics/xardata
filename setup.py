@@ -16,7 +16,7 @@ setup(
     long_description= open('README.md').read(),#+ '\n\n' + open('CHANGELOG.md').read(),
     long_description_content_type = "text/markdown",
 
-    install_requires= ['yfinance','yahooquery~=2.3.7'],
+    install_requires= ['yfinance','yahooquery'],
 
     setup_requires= ['pytest-runner'],
 
