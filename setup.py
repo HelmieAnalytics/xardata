@@ -1,9 +1,9 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='zaquitydata',
+    name='zada',
     
-    packages=find_packages(include=['zaquitydata']),
+    packages=find_packages(include=['zada']),
     
     version='0.1.6',
     
@@ -11,12 +11,12 @@ setup(
     
     author='HelmieAnalytics',
 
-    url='https://github.com/HelmieAnalytics/zaquitydata',
+    url='https://github.com/HelmieAnalytics/zada',
     
     long_description= open('README.md').read(),#+ '\n\n' + open('CHANGELOG.md').read(),
     long_description_content_type = "text/markdown",
 
-    install_requires= ['yfinance','yahooquery~=2.3.7'],
+    install_requires= ['yfinance','yahooquery'],
 
     setup_requires= ['pytest-runner'],
 
