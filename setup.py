@@ -1,17 +1,17 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='zada',
+    name='xardata',
     
-    packages=find_packages(include=['zada']),
+    packages=find_packages(include=['xardata']),
     
-    version='0.1.7',
+    version='0.1.0',
     
     description='A stock price data import package',
     
     author='HelmieAnalytics',
 
-    url='https://github.com/HelmieAnalytics/zada',
+    url='https://github.com/HelmieAnalytics/xardata',
     
     long_description= open('README.md').read(),#+ '\n\n' + open('CHANGELOG.md').read(),
     long_description_content_type = "text/markdown",
