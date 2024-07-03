@@ -33,7 +33,7 @@ tickers = jse_tickers.get_tickers("your_api_key_here")
 ```
 `.get.data`
 ```
-jse_data.get_data(['AAPL', 'MSFT'], '2022-01-01', '2022-12-31', '/path/to/output_folder')
+jse_data.get_data(['ABG', 'NPN'], '2022-01-01', '2022-12-31', '/path/to/output_folder')
 ```
 `.clean`
 ```
