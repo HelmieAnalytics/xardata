@@ -1,17 +1,17 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='Zaquitydata',
+    name='zaquitydata',
     
-    packages=find_packages(include=['Zaquitydata']),
+    packages=find_packages(include=['zaquitydata']),
     
-    version='0.1.1',
+    version='0.1.0',
     
     description='A stock price data import package',
     
     author='HelmieAnalytics',
 
-    url='https://github.com/HelmieAnalytics/Zaquitydata',
+    url='https://github.com/HelmieAnalytics/zaquitydata',
     
     long_description= open('README.md').read(),#+ '\n\n' + open('CHANGELOG.md').read(),
     long_description_content_type = "text/markdown",
