@@ -1,4 +1,4 @@
-# Zada
+# XarData
 
 This package provides utility functions for working with stock price series data of 350 securities trading on the Johannesburg Stock Exchange (XJSE). It includes processing stock tickers, fetching historical data, cleaning outliers, and saving the price data in ohlcv format as a dataset/data bundle to a folder in your local disc drive. Each file saved in the dataset is in csv format. 
 
@@ -19,10 +19,10 @@ A MarketStack API is required to retrieve stock tickers which the user can obtai
 ### 1. Import the desired module(s) from the package.
 
 ```
-import zada
-from zada import jse_tickers
-from zada import jse_data
-from zada import process_data
+import xardata
+from xardata import jse_tickers
+from xardata import jse_data
+from xardata import process_data
 ```
    
 ### 2. Use the provided functions to perform specific tasks related to stock data.
@@ -46,10 +46,10 @@ process_data.clean('/path/to/csv_folder')
 Import functions
 ```
 import pandas as pd
-import zada
-from zada import jse_tickers as jt
-from zada import jse_data as jd
-from zada import process_data as jpd
+import xardata
+from xardata import jse_tickers as jt
+from xardata import jse_data as jd
+from xardata import process_data as jpd
 ```
 1. Set variables.
 ```
@@ -80,6 +80,6 @@ Passing the `df` variable or `print(df)` function will now display the ohlc pric
 
 ## Limitations and recommendations
 
-1. Zada is currently under development and not available for release and installation on PyPI.
+1. XarData is currently under development and not available for release and installation on PyPI.
 
-2. The data imported with Zada is not suitable for backtesting investment strategies or developing trading systems. It includes only historical prices of companies trading on the XJSE (Johannesburg Stock Exchange) on the specific day and time the package is used. As a result, the dataset imported with this package suffers from inherent bias, specifically survivorship bias. In future versions, efforts will be made to mitigate this effect. To create a more robust dataset, users can supplement it with data from other sources to reduce bias and improve the reliability of their analysis.
+2. The data imported with XarData is not suitable for backtesting investment strategies or developing trading systems. It includes only historical prices of companies trading on the XJSE (Johannesburg Stock Exchange) on the specific day and time the package is used. As a result, the dataset imported with this package suffers from inherent bias, specifically survivorship bias. In future versions, efforts will be made to mitigate this effect. To create a more robust dataset, users can supplement it with data from other sources to reduce bias and improve the reliability of their analysis.
